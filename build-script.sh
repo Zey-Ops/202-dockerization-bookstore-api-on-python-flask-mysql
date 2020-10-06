@@ -11,13 +11,11 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 TOKEN="xxxxxxxxx"
-FOLDER="https://$TOKEN@raw.githubusercontent.com/clarusway/clarusway-aws-devops-1-20/master/devops/projects/202-dockerization-bookstore-api-on-python-flask-mysql/"
+FOLDER="https://$TOKEN@raw.githubusercontent.com/Zey-Ops/202-dockerization-bookstore-api-on-python-flask-mysql/main/docker-compose.yml"
 curl -s --create-dirs -o "/home/ec2-user/bookstore-api/bookstore-api.py" -L "$FOLDER"bookstore-api.py
 curl -s --create-dirs -o "/home/ec2-user/bookstore-api/requirements.txt" -L "$FOLDER"requirements.txt
 curl -s --create-dirs -o "/home/ec2-user/bookstore-api/Dockerfile" -L "$FOLDER"Dockerfile
 curl -s --create-dirs -o "/home/ec2-user/bookstore-api/docker-compose.yml" -L "$FOLDER"docker-compose.yml
 cd /home/ec2-user/bookstore-api
-docker build -t callahanclarus/bookstore-api:latest .
+docker build -t zey/bookstore-api:latest .
 docker-compose up -d
-
-
