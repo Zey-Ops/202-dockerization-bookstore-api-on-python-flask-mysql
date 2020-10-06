@@ -15,7 +15,7 @@ services:
     restart: always
     depends_on: 
       - database
-    port: 
+    ports: 
       - "80:80"
     networks:
       - clarusnet
