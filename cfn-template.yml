@@ -45,7 +45,7 @@ Resources:
           sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" \
           -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
-          TOKEN="2bf83eda6abe858c76a746ed999d5a52dbcf5466"
+          TOKEN="xxxx"
           FOLDER="https://$TOKEN@raw.githubusercontent.com/Zey-Ops/202-dockerization-bookstore-api-on-python-flask-mysql/main/docker-compose.yml"
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/bookstore-api.py" -L "$FOLDER"bookstore-api.py
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/requirements.txt" -L "$FOLDER"requirements.txt
